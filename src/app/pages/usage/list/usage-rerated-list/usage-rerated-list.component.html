@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>{{title}}</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  
+  
+    <app-usage-card class="item" *ngFor="let item of list | async" [statuss]="'rerated'" [usage]="item" ></app-usage-card>
+    
+  
+  <br>
+  <button mat-fab class="action-btn" (click)="openDialog()">
+    <mat-icon>add</mat-icon>
+  </button>

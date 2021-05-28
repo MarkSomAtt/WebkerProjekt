@@ -1,0 +1,19 @@
+
+<mat-card *ngIf="usage && statuss==usage.status">
+    <mat-card-header>
+        <mat-card-title>{{usage.description}}</mat-card-title>
+        <mat-card-subtitle>{{usage.id}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <p>{{usage.usageDate | date : 'yyyy-MM-ddTHH:mm:ss'}}</p>
+        <p>Type:{{usage.usageType}}</p>
+        <p>Satus:{{usage.status}}</p>
+     
+        <mat-icon class="delete" (click)="delete()">delete</mat-icon>
+        <mat-icon  class="szerkeszt" (click)="usageSzerkeszt(usage)">settings</mat-icon>
+       
+    </mat-card-content>
+</mat-card>
+
+
+
